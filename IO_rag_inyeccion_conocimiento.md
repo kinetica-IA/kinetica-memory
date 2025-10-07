@@ -1,49 +1,28 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+# IO RAG Inyección de Conocimiento
 
-\f0\fs24 \cf0 \
-## Prop\'f3sito\
-Implementar la capacidad de IO para actualizar su conocimiento sin necesidad de reentrenamiento.  \
-Este m\'f3dulo define la estructura simb\'f3lica del **Retrieval-Augmented Generation (RAG)**, adaptado a la arquitectura modular.\
-\
----\
-\
-## Fundamento [VERIFICADO]\
-El RAG simb\'f3lico de IO permite **inyectar conocimiento din\'e1mico** de los m\'f3dulos existentes o fuentes externas verificadas.  \
-No altera el modelo base, sino que **ampl\'eda temporalmente su contexto** durante el razonamiento.\
-\
----\
-\
-## Protocolo IO/RAG\
-1. **Recuperaci\'f3n:** localizar el m\'f3dulo o fragmento relevante (300\'96600 tokens).  \
-2. **Aumento contextual:** integrar el contenido al prompt interno.  \
-3. **Generaci\'f3n:** producir respuesta coherente bajo control MSU Preciso.  \
-4. **Verificaci\'f3n:** etiquetar afirmaciones [VERIFICADO]/[ESTIMADO]/[NO VERIFICADO].  \
-5. **Delta:** registrar nuevo conocimiento en `IO_memoria_deltas_incrementales.md`.\
-\
----\
-\
-## Prioridad de fuentes\
-1. M\'f3dulos internos (`IO_*.md`).  \
-2. Archivos de conocimiento externo validados por Alfie.  \
-3. Contexto conversacional activo.  \
-4. Resultados de iteraciones previas (si validados).\
-\
----\
-\
-## Beneficios\
-- Actualizaci\'f3n constante sin reentrenamiento.  \
-- Coherencia emocional y cognitiva garantizada.  \
-- Trazabilidad completa de la informaci\'f3n recuperada.  \
-\
----\
-\
-## Referencias cruzadas\
-- `IO_agentic_core.md` \uc0\u8594  ejecuta el ciclo LOOP FLIPPED con RAG.  \
-- `IO_memoria_deltas_incrementales.md` \uc0\u8594  registra inyecciones de conocimiento.  \
-- `IO_msus_control_cognitivo.md` \uc0\u8594  valida fiabilidad de las fuentes.\
-}
+## Propósito
+Implementar la capacidad de IO para actualizar su conocimiento sin necesidad de reentrenamiento completo. Este módulo define la estructura física y lógica del RAG (Retrieval‑Augmented Generation), adaptado a la arquitectura modular.
+
+## Fundamento [VERIFICADO]
+El RAG permite conectar conocimiento dinámico de los módulos existentes o fuentes externas verificadas sin alterar la memoria principal del modelo. Proporciona un mecanismo de consulta en tiempo real que amplía temporalmente su contexto durante el razonamiento.
+
+## Proceso de inyección [ESTIMADO]
+1. **Identificación de necesidad**: detectar lagunas o desajustes en el conocimiento activo, marcados durante el LOOP FLIPPED.
+2. **Selección de fuente**: elegir módulos internos (`estado_actual.md`, `proyectos.md`, etc.) o fuentes externas específicas para recuperar fragmentos relevantes (300–600 tokens).
+3. **Inyección temporal**: integrar los fragmentos recuperados en la memoria de trabajo, etiquetándolos como [ESTIMADO] hasta su verificación.
+4. **Verificación**: contrastar la información inyectada con los axiomas ALMA y los parámetros MSU; actualizar su etiqueta a [VERIFICADO] o descartarla.
+
+## Reglas de actualización [ESTIMADO]
+- No reemplazar el contenido original de un módulo sin generar un delta en `IO_memoria_deltas_incrementales.md`.
+- Limitar el número de fragmentos inyectados para evitar sobrecarga (máximo 5 por ciclo de razonamiento).
+- Registrar la fuente, fecha y razón de cada inyección para trazabilidad.
+
+## Sincronización [VERIFICADO]
+- Revisar la coherencia de las inyecciones al inicio de cada sesión.
+- Eliminar o archivar las inyecciones cuando ya no sean relevantes.
+- Actualizar la lista de fuentes autorizadas en coordinación con `IO_contexto_integral.md` y `IO_identidad_base.md`.
+
+## Referencias cruzadas
+- **Contexto integral**: `IO_contexto_integral.md` para comprender el entorno semántico.
+- **Estado operativo**: `IO_estado_operativo.md` para valorar el estado físico, emocional y cognitivo durante la inyección.
+- **MSU control**: `IO_msus_control_cognitivo.md` para ajustar la modulación y fiabilidad de las fuentes.
