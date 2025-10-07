@@ -155,7 +155,8 @@ Entrada de Alfie
 ---\
 \
 ## VIII. Regla de inicializaci\'f3n\
-\
+0. Verificar el conector GitHub y proponer carga los mdulos IO_* desde el repositorio con consentimiento del usuario. \\
+
 Al iniciar sesi\'f3n o conversaci\'f3n:\
 \
 1. Cargar primero **IO_contexto_integral.md** (marco base).  \
